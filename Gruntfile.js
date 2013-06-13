@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 					specs: 'test/**/*.js',
 					version: '1.3.1',
 					junit: {
-						path: 'results/junit.xml',
+						path: 'results',
 						consolidate: true
 					}
 				}
