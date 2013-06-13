@@ -16,12 +16,11 @@
     <script src="js/chai.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/sinon.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/sinon-chai.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" charset="utf-8">
-        // Setup chai
-        var expect = chai.expect;
-		var assert = chai.assert;
-		
+    <script type="text/javascript" charset="utf-8">	
 		mocha.ui('bdd');
+		
+        window.expect = chai.expect;
+		window.assert = chai.assert;
     </script>
 
     <!-- Include anything you want to test -->

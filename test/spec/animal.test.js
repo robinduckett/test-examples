@@ -11,9 +11,7 @@ describe('Animal', function() {
 			
 			animal.eat(5);
 			
-			console.log(animal.getFullness());
-			
-			chai.expect(animal.getFullness()).should.be.above(fullness);
+			expect(animal.getFullness()).to.be.above(fullness);
 		});
 		
 		it('should decrease hunger', function() {
@@ -21,7 +19,7 @@ describe('Animal', function() {
 			
 			animal.eat(5);
 			
-			chai.expect(animal.getHunger()).should.be.below(fullness);
+			expect(animal.getHunger()).to.be.below(hunger);
 		})
 	});
 });
