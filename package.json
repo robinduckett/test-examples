@@ -4,10 +4,18 @@
   "description": "Test Examples",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/grunt test"
+    "test": "node_modules/.bin/grunt",
+	"jenkins": "node_modules/.bin/grunt test"
   },
-  "repository": "",
+  "repository": "git://blah/blah.git",
+  "readme": "README.md",
   "author": "Robin Duckett",
   "license": "Copyright",
-  "gitHead": "0503f4cd4e5534d16bec5eeb1ae26b104038f3e0"
+  "gitHead": "0503f4cd4e5534d16bec5eeb1ae26b104038f3e0",
+  "devDependencies": {
+    "grunt-notify": "~0.2.4",
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "grunt-mocha-phantomjs": "~0.2.8"
+  }
 }
