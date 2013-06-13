@@ -2,27 +2,34 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
-		mocha_phantomjs: {
+		jasmine: {
 			browser: {
-				src: ['test/**/*.html'],
+				src: ['src/**/*.js'],
+				
 				options: {
-					reporter: 'spec'
+					specs: 'test/**/*.js',
+					version: '1.3.1'
 				}
 			},
 			
 			jenkins: {
-				src: ['test/**/*.html'],
+				src: ['src/**/*.js'],
+				
 				options: {
-					reporter: 'xunit',
-					output: 'results/xunit.xml'
+					specs: 'test/**/*.js',
+					version: '1.3.1',
+					junit: {
+						path: 'results/junit.xml',
+						consolidate: true
+					}
 				}
 			}
 		}
 	});
 	
 	grunt.loadNpmTasks('grunt-notify');
-	grunt.loadNpmTasks('grunt-mocha-phantomjs');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	
-	grunt.registerTask('default', ['mocha_phantomjs:browser']);
-	grunt.registerTask('test', ['mocha_phantomjs:jenkins']);
+	grunt.registerTask('default', ['jasmine:browser']);
+	grunt.registerTask('test', ['jasmine:jenkins']);
 };
