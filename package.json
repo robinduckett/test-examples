@@ -1,0 +1,13 @@
+{
+  "name": "test-examples",
+  "version": "0.0.1",
+  "description": "Test Examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/grunt test"
+  },
+  "repository": "",
+  "author": "Robin Duckett",
+  "license": "Copyright",
+  "gitHead": "0503f4cd4e5534d16bec5eeb1ae26b104038f3e0"
+}
