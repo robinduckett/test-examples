@@ -1,25 +1,27 @@
-suite('Animal', function() {
+describe('Animal', function() {
 	var animal;
 	
 	beforeEach(function() {
 		animal = new Animal();
 	});
 	
-	suite('#eat()', function () {
-		test('eating increases fullness', function() {
+	describe('#eat()', function () {
+		it('should increase fullness', function() {
 			var fullness = animal.getFullness();
 			
 			animal.eat(5);
 			
-			assert.ok(animal.getFullness() > fullness, 'animal is fuller than before');
+			console.log(animal.getFullness());
+			
+			chai.expect(animal.getFullness()).should.be.above(fullness);
 		});
 		
-		test('eating decreases hunger', function() {
+		it('should decrease hunger', function() {
 			var hunger = animal.getHunger();
 			
 			animal.eat(5);
 			
-			assert.ok(animal.getHunger() < hunger, 'animal is less hungry than before');
+			chai.expect(animal.getHunger()).should.be.below(fullness);
 		})
 	});
 });
