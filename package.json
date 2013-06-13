@@ -9,5 +9,11 @@
   "repository": "",
   "author": "Robin Duckett",
   "license": "Copyright",
-  "gitHead": "0503f4cd4e5534d16bec5eeb1ae26b104038f3e0"
+  "gitHead": "0503f4cd4e5534d16bec5eeb1ae26b104038f3e0",
+  "devDependencies": {
+    "grunt-mocha": "~0.3.4",
+    "grunt-notify": "~0.2.4",
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1"
+  }
 }
