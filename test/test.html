@@ -20,14 +20,19 @@
 		mocha.ui('bdd');
 		
         window.expect = chai.expect;
-		window.assert = chai.assert;
     </script>
+
+	<!-- It's nice to seperate libraries, but not necessary -->
+	<script src="../src/libs/jquery.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Include anything you want to test -->
     <script src="../src/animal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../src/button.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Spec files -->
     <script src="spec/animal.test.js" type="text/javascript" charset="utf-8"></script>
+	<script src="spec/button.stub.test.js" type="text/javascript" charset="utf-8"></script>
+	<script src="spec/button.mock.test.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- run mocha -->
     <script type="text/javascript" charset="utf-8">

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/grunt",
-	"jenkins": "node_modules/.bin/grunt test"
+    "jenkins": "node_modules/.bin/grunt test",
+	"watch": "node_modules/.bin/grunt watch"
   },
   "repository": "git://blah/blah.git",
   "readme": "README.md",
@@ -16,6 +17,7 @@
     "grunt-notify": "~0.2.4",
     "grunt-cli": "~0.1.9",
     "grunt": "~0.4.1",
-    "grunt-mocha-phantomjs": "~0.2.8"
+    "grunt-mocha-phantomjs": "~0.2.8",
+    "grunt-contrib-watch": "~0.4.4"
   }
 }
